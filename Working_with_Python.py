@@ -1,5 +1,5 @@
 # extract_doc_info.py
-
+#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
 from PyPDF4 import PdfFileReader
 
 def extract_information(pdf_path):
