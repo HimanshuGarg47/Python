@@ -53,3 +53,91 @@ so there is a way around that, we use 'Waits' so do things slowly, so the server
 done by a human.
 '''
 
+
+
+# @gfg_decorator
+# def hello_decorator():
+#     print("Gfg")
+
+# '''Above code is equivalent to -
+
+# def hello_decorator():
+#     print("Gfg")
+    
+# hello_decorator = gfg_decorator(hello_decorator)'''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# # importing libraries
+# import time
+# import math
+
+# # decorator to calculate duration
+# # taken by any function.
+# def calculate_time(func):
+	
+# 	# added arguments inside the inner1,
+# 	# if function takes any arguments,
+# 	# can be added like this.
+# 	def inner1(*args, **kwargs):
+
+# 		# storing time before function execution
+# 		begin = time.time()
+		
+# 		func(*args, **kwargs)
+
+# 		# storing time after function execution
+# 		end = time.time()
+# 		print("Total time taken in : ", func.__name__, end - begin)
+
+# 	return inner1
+
+
+
+# # this can be added to any function present,
+# # in this case to calculate a factorial
+# @calculate_time
+# def factorial(num):
+
+# 	# sleep 2 seconds because it takes very less time
+# 	# so that you can see the actual difference
+# 	time.sleep(2)
+# 	print(math.factorial(num))
+
+# # calling the function.
+# factorial(10)
+
+
+
+
+
+
+
+
+
+
+
+# # Python program to illustrate functions
+# # can be treated as objects
+# def shout(text):
+# 	return text.upper()
+
+# print(shout('Hello'))
+
+# yell = shout
+
+# print(yell('Hello'))
+
