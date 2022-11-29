@@ -1,6 +1,6 @@
 from PIL import Image , ImageFilter
-
-img = Image.open('.\Images\astro.jpg')
+# ImagePlayground\Images\charmander.jpg
+img = Image.open(r"D:\myCode\Python\ImagePlayground\Images\astro.jpg")
 print(img.size)
 img.thumbnail((400,200))
 print(img.size)
