@@ -6,7 +6,7 @@ import os
 
 
 # URL from which pdfs to be downloaded
-url = "https://www.cs.cmu.edu/afs/cs/academic/class/15210-s14/www/lectures/"
+url = "https://algs4.cs.princeton.edu/lectures/"
 
 # Requests URL and get response object
 response = requests.get(url)
@@ -33,8 +33,12 @@ for link in links:
         # tempTuple = os.path.splitext(lnkhref)
 
         dir_path = os.path.dirname(os.path.realpath(__file__))
+        dirname = os.path.dirname(lnkhref)
+        path = f"{dir_path}\{dirname}"
+        if not os.path.exists(path):
+            os.makedirs(path)
 
-        pdf = open(f"{dir_path}\graph\pdfs\{lnkhref}", 'wb')
+        pdf = open(f"{path}\{os.path.basename(lnkhref)}", 'wb')
         pdf.write(response.content)
         pdf.close()
         print("File ", i, " downloaded")
