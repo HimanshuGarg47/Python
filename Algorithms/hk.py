@@ -64,6 +64,7 @@ def Right(grid, pacpos):
     return pacpos
 
 
+
 def DFS(pacpos, foodpos, grid):
     global stack
     while stack:
@@ -128,9 +129,8 @@ gridsize.append(grid_r)
 gridsize.append(grid_c)
 
 grid = []
-for i in range(0, grid_r):  # A for loop for row entries
-    inputs = []
-    inputs = list(input())  # list(map(str, input().split()))
+for i in range(0, grid_r):  
+    inputs = list(input())  
     grid.append(inputs)
 
 
